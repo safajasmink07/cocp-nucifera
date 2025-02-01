@@ -387,3 +387,7 @@ footer {
     gap: 15px;
     margin-top: 10px;
 }
+
+.product-details-item img {
+    width: 200px;
+}

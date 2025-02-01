@@ -1,0 +1,188 @@
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Glow & Grow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Coco nucifera" class="logo">
+        </div>
+        <div class="brand-info">
+            <h1 class="brand-name">Coco Nucifera</h1>
+            <p class="tagline">Grow Naturally With Every Drop</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="advertise.html">About Our Brand</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="product-categories.html">Products</a></li>
+            <li><a href="customer-care.html">Customer Care</a></li>
+        </ul>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <section class="admin-dashboard">
+        <h2>Admin Dashboard</h2>
+        <div class="dashboard-actions">
+            <button class="btn" onclick="location.href='#add-product'">Add New Product</button>
+            <button class="btn" onclick="location.href='#edit-products'">Edit Products</button>
+            <button class="btn" onclick="location.href='#manage-categories'">Manage Categories</button>
+            <button class="btn" onclick="location.href='#view-orders'">View Orders</button>
+            <button class="btn" onclick="location.href='#manage-users'">Manage Users</button>
+        </div>
+
+        <!-- Add Product Section -->
+        <div id="add-product" class="dashboard-section">
+            <h3>Add New Product</h3>
+            <form action="#" method="post">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+                
+                <label for="product-price">Price:</label>
+                <input type="number" id="product-price" name="product-price" required>
+                
+                <label for="product-category">Category:</label>
+                <select id="product-category" name="product-category">
+                    <option value="skin-care">Skin Care</option>
+                    <option value="hair-care">Hair Care</option>
+                    <option value="body-care">Body Care</option>
+                </select>
+                
+                <label for="product-description">Description:</label>
+                <textarea id="product-description" name="product-description" rows="4" required></textarea>
+                
+                <label for="product-image">Upload Image:</label>
+                <input type="file" id="product-image" name="product-image" accept="image/*" required>
+                
+                <button type="submit" class="btn">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Edit Products Section -->
+        <div id="edit-products" class="dashboard-section">
+            <h3>Edit Products</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Serum</td>
+                        <td>$350.00</td>
+                        <td>Serum</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Manage Categories Section -->
+        <div id="manage-categories" class="dashboard-section">
+            <h3>Manage Categories</h3>
+            <form action="#" method="post">
+                <label for="category-name">Category Name:</label>
+                <input type="text" id="category-name" name="category-name" required>
+                <button type="submit" class="btn">Add Category</button>
+            </form>
+            <ul>
+                <li>Skin Care <button class="btn delete-btn">Delete</button></li>
+                <li>Hair Care <button class="btn delete-btn">Delete</button></li>
+                <li>Body Care <button class="btn delete-btn">Delete</button></li>
+            </ul>
+        </div>
+
+        <!-- View Orders Section -->
+        <div id="view-orders" class="dashboard-section">
+            <h3>View Orders</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#12345</td>
+                        <td>John Doe</td>
+                        <td>$75.00</td>
+                        <td>Shipped</td>
+                        <td><button class="btn">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>#67890</td>
+                        <td>Jane Smith</td>
+                        <td>$45.00</td>
+                        <td>Pending</td>
+                        <td><button class="btn">View Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Manage Users Section -->
+        <div id="manage-users" class="dashboard-section">
+            <h3>Manage Users</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td><button class="btn delete-btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td><button class="btn delete-btn">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;</p>
+    </footer>
+</body>
+</html>

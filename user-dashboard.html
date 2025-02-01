@@ -1,0 +1,115 @@
+<!-- user-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Glow & Grow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Glow & Grow Logo" class="logo">
+        </div>
+        <div class="brand-info">
+            <h1 class="brand-name">Glow & Grow</h1>
+            <p class="tagline">Your Path to Radiant Skin & Healthy Hair</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="advertise.html">About Our Brand</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="product-categories.html">Products</a></li>
+            <li><a href="customer-care.html">Customer Care</a></li>
+        </ul>
+    </nav>
+
+    <!-- User Dashboard -->
+    <section class="user-dashboard">
+        <h2>User Dashboard</h2>
+        <div class="dashboard-actions">
+            <button class="btn" onclick="location.href='#profile'">Profile</button>
+            <button class="btn" onclick="location.href='#order-history'">Order History</button>
+            <button class="btn" onclick="location.href='#track-order'">Track Order</button>
+            <button class="btn" onclick="location.href='#wishlist'">Wishlist</button>
+        </div>
+
+        <!-- Profile Section -->
+        <div id="profile" class="dashboard-section">
+            <h3>Profile</h3>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="John Doe" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4">123 Main St, City, Country</textarea>
+                
+                <button type="submit" class="btn">Update Profile</button>
+            </form>
+        </div>
+
+        <!-- Order History Section -->
+        <div id="order-history" class="dashboard-section">
+            <h3>Order History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#12345</td>
+                        <td>2023-10-01</td>
+                        <td>$75.00</td>
+                        <td>Delivered</td>
+                    </tr>
+                    <tr>
+                        <td>#67890</td>
+                        <td>2023-09-25</td>
+                        <td>$45.00</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Track Order Section -->
+        <div id="track-order" class="dashboard-section">
+            <h3>Track Order</h3>
+            <form action="#" method="post">
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="order-id" placeholder="Enter your order ID" required>
+                <button type="submit" class="btn">Track</button>
+            </form>
+        </div>
+
+        <!-- Wishlist Section -->
+        <div id="wishlist" class="dashboard-section">
+            <h3>Wishlist</h3>
+            <ul>
+                <li>Moisturizing Cream <button class="btn remove-btn">Remove</button></li>
+                <li>Hair Growth Serum <button class="btn remove-btn">Remove</button></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Glow & Grow. All rights reserved.</p>
+    </footer>
+    <script src="user.js"></script>
+</body>
+</html>

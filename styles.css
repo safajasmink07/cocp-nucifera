@@ -241,6 +241,7 @@ nav ul li a:hover {
 .category-item img {
     max-width: 100%;
     height: auto;
+    aspect-ratio: 1;
     border-radius: 10px;
 }
 
